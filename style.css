@@ -1,0 +1,67 @@
+*{
+  margin: none;
+  padding: none;
+  border: 1px solid lightgreen;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.all-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-side {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.right-side {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/***** MEAL DETAILS *****/
+
+.meal-details-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form */
+.details form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.buttons {
+  display:flex;
+  justify-content: center;
+}
+
+
+.left-charges, .left-total, .left-earnings {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.right-charges, .right-total, .right-earnings {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
