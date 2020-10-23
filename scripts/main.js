@@ -76,6 +76,7 @@ function render() {
           </div>
         </div>
       </div>
+      <button id="reset-button">Reset</button>
     </div>
   `);
 }
@@ -102,7 +103,27 @@ function handleSubmit() {
       throw new Error('Please fill out all areas');
     }
   });
+}
 
+function handleCancel() {
+  $('main').on('click', '#cancel-button', function() {
+    $('#base-meal-price').val(null);
+    $('#tax-rate').val(null);
+    $('#tip-percentage').val(null);
+    render();
+  });
+}
+
+function handleReset() {
+  $('main').on('click', '#reset-button', function() {
+    store.subTotal = 0;
+    store. tip = 0;
+    store.total = 0;
+    store.tipTotal = 0;
+    store. mealCount = 0;
+    store.avgTPM = 0;
+    render();
+  });
 }
 
 function validateNums(bmp, tr, tp) {
@@ -122,6 +143,8 @@ function validateNums(bmp, tr, tp) {
 function main() {
   render();
   handleSubmit();
+  handleReset();
+  handleCancel();
 }
 
 $(main);
